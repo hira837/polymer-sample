@@ -27,7 +27,8 @@
         "minify": true
       },
       "bundle": true,
-      "addServiceWorker": true
+      "addServiceWorker": true,
+      "addPushManifest": true
     },
     {
       "name": "es6-bundled",
@@ -45,10 +46,14 @@
         "minify": true
       },
       "bundle": true,
-      "addServiceWorker": true
+      "addServiceWorker": true,
+      "addPushManifest": true
     },
     {
       "name": "es5-bundled",
+      "browserCapabilities": [
+        "es2015", "push", "serviceWorker"
+      ],
       "js": {
         "minify": true,
         "compile": true,
@@ -61,7 +66,10 @@
         "minify": true
       },
       "bundle": true,
-      "addServiceWorker": true
+      "addServiceWorker": true,
+      "addPushManifest": true,
+      "swPrecacheConfig": "sw-precache-config.js",
+      "insertPrefetchLinks": true
     }
   ],
   "moduleResolution": "node",
